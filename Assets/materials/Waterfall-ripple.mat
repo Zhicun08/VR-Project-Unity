@@ -20,13 +20,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Waterfall
-  m_Shader: {fileID: -6465566751694194690, guid: 0feffb0ac43154d7388b42c5c31acb37, type: 3}
+  m_Name: Waterfall-ripple
+  m_Shader: {fileID: -6465566751694194690, guid: cb81e493da2a9446fbb9cb793fb89347, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3002
+  m_CustomRenderQueue: 3001
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -90,9 +90,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_09a65d68b4f948c68dce63034ce8e615: 1
-    - Vector1_2f45c41b0dd24b79b458957744700600: 5
+    - Vector1_2f45c41b0dd24b79b458957744700600: 6
     - Vector1_31831f5a26544f32aee7667d692b7b0b: 0.2
-    - Vector1_466888c522ba44e3b77f10514333b2b4: 0.2
+    - Vector1_3c91371d278d42199a7a95a881dc59d3: 15
     - Vector1_c48cf3afadb44fab8b7e2b3db7bf4314: 0.12
     - Vector1_c6bee2ca1d354c519c90dcccddfcd0ba: 0.2
     - Vector1_fa0c4ed96ba04a968e9eb05464ad3813: 10
@@ -123,11 +123,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_57601fa7e53f427ca1ed8b20316174ed: {r: 1.229253, g: 3.2701, b: 5.7911468, a: 1}
-    - Color_fcaf8b8ad3264e6bab7f51e7347d3de9: {r: 0, g: 0.5905471, b: 1, a: 1}
+    - Color_57601fa7e53f427ca1ed8b20316174ed: {r: 2.5788941, g: 3.4199722, b: 3.6692991, a: 1}
+    - Color_fcaf8b8ad3264e6bab7f51e7347d3de9: {r: 0.4575472, g: 0.8202759, b: 1, a: 1}
     - Vector2_0197d02b3ecb41ae96fe93008324f3cc: {r: 1, g: 1.6, b: 0, a: 0}
-    - Vector2_821df58f59394c3d939b74e25ba61c4f: {r: 0, g: 0.5, b: 0, a: 0}
-    - Vector2_d6664fd5b59e41048d3cbbf48d9a2fc3: {r: 0, g: -0.75, b: 0, a: 0}
+    - Vector2_821df58f59394c3d939b74e25ba61c4f: {r: 0, g: 0.1, b: 0, a: 0}
+    - Vector2_d6664fd5b59e41048d3cbbf48d9a2fc3: {r: 0, g: 0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
