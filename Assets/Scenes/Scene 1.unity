@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3665553, g: 0.24461706, b: 0.66881174, a: 1}
+  m_IndirectSpecularColor: {r: 0.36386698, g: 0.24527344, b: 0.6685585, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -345,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2590565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.046, y: 1.001, z: 3.463}
+  m_LocalPosition: {x: -2.046, y: 0.83500004, z: 3.463}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6153,7 +6153,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_SelectActionValue:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Select Action Value
       m_Type: 0
@@ -19360,7 +19360,7 @@ MonoBehaviour:
   m_Camera: {fileID: 779557591}
   m_OriginBaseGameObject: {fileID: 1012017538}
   m_CameraFloorOffsetObject: {fileID: 1678674477}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
 --- !u!4 &1012017540
 Transform:
@@ -19370,7 +19370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012017538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7507486, y: -0.16859388, z: -0.12384558}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1678674478}
@@ -20198,7 +20198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072562167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.37, y: -0.018999994, z: 3.463}
+  m_LocalPosition: {x: -1.37, y: -0.185, z: 3.463}
   m_LocalScale: {x: 2.7363834, y: 1.4803001, z: 1.74762}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20546,7 +20546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1087900375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20561,7 +20561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087900374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.77, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6111194577737545122}
@@ -27558,7 +27558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661962193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.928, y: 0.806, z: 3.44}
+  m_LocalPosition: {x: -0.928, y: 0.64, z: 3.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 934862056}
@@ -30886,7 +30886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996837012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30901,7 +30901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996837011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.72, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967156292836188744}
@@ -32561,7 +32561,7 @@ GameObject:
   - component: {fileID: 3789863183163752619}
   - component: {fileID: 649022581620595841}
   - component: {fileID: 918727614329648089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32585,7 +32585,7 @@ MonoBehaviour:
   rotationSpeed: 100
   palm: {fileID: 1087900375}
   reachDistance: 0.1
-  joinDistance: 0.05
+  joinDistance: 0.5
   grabbableLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -32666,7 +32666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918727614329648088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.219, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 1087900375}
@@ -32742,7 +32742,7 @@ GameObject:
   - component: {fileID: 7459440098251391407}
   - component: {fileID: 4008784665686184923}
   - component: {fileID: 7834165934559135224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32766,7 +32766,7 @@ MonoBehaviour:
   rotationSpeed: 100
   palm: {fileID: 1996837012}
   reachDistance: 0.1
-  joinDistance: 0.05
+  joinDistance: 0.5
   grabbableLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -32779,7 +32779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2146512945119327486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

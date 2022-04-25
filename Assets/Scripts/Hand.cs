@@ -13,7 +13,10 @@ public class Hand : MonoBehaviour
     [Space]
     [SerializeField] private Transform palm;
     [SerializeField] private float reachDistance = 0.1f, joinDistance = 0.05f;
+
     [SerializeField] private LayerMask grabbableLayer;
+    private int ignorePlayerLayer; //This layer does not collide with the player
+    private int originalLayer; //Here we can save the original layer the object was on that was picked up
 
     private bool isGrabbing;
     private GameObject heldObject;
@@ -28,6 +31,9 @@ public class Hand : MonoBehaviour
     {
         handRb = GetComponent<Rigidbody>();
         followTarget = controller.gameObject.transform;
+
+        //This gets the layer number from the IgnorePlayer so we dont have to track it ourselves
+        ignorePlayerLayer = LayerMask.NameToLayer("IgnorePlayer");
 
         // Reset Rigidbody setting in case something was changed in Inspector
         handRb.collisionDetectionMode = CollisionDetectionMode.Continuous;
@@ -119,6 +125,10 @@ public class Hand : MonoBehaviour
         grabPoint.position = collider.ClosestPoint(palm.position);
         // Parent the grab point to the held object
         grabPoint.parent = heldObject.transform;
+        // Save the original layer
+        originalLayer = heldObject.gameObject.layer; 
+        // Ignore player layer - keeps held objects from hitting the players collider
+        heldObject.gameObject.layer = ignorePlayerLayer; 
 
         // Move hand to grab point
         followTarget = grabPoint;
@@ -186,6 +196,7 @@ public class Hand : MonoBehaviour
             var targetRb = heldObject.GetComponent<Rigidbody>();
             targetRb.collisionDetectionMode = CollisionDetectionMode.Discrete;
             targetRb.interpolation = RigidbodyInterpolation.None;
+            heldObject.gameObject.layer = originalLayer; //Reset the physics layer
             heldObject = null;
         }
 
