@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hands
+  m_Shader: {fileID: -6465566751694194690, guid: c62168cbde98a4006b0d6ae70f87403f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3003
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_34a037f19caa4e51ab0d1573d7b66d54: 0.97
+    - Vector1_7fe504e629f34aaaaa54d5595a27d903: 0.82
+    - Vector1_bdfd5dd81f784556a5c80228cb72f529: 0.4
+    m_Colors:
+    - Color_112dab85d8ff491d8623045ebe1dbe8d: {r: 2.0912955, g: 1.2725335, b: 1.3560807, a: 1}
+    - Color_f0e8814aa64747a384394885c4432853: {r: 2.270603, g: 0.54684675, b: 0.57062274, a: 1}
+  m_BuildTextureStacks: []
