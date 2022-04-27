@@ -10,6 +10,8 @@ public class Hand : MonoBehaviour
     [SerializeField] private ActionBasedController controller;
     [SerializeField] private float followSpeed = 30f;
     [SerializeField] private float rotationSpeed = 100f;
+    [SerializeField] private Vector3 positionOffset;
+    [SerializeField] private Vector3 rotationOffset;
     [Space]
     [SerializeField] private Transform palm;
     [SerializeField] private float reachDistance = 0.1f, joinDistance = 0.05f;
@@ -58,14 +60,18 @@ public class Hand : MonoBehaviour
 
     private void PhysicsMove()
     {
-        // Update Position
-        // Get the distance between target and player's hand
-        var distance = Vector3.Distance(followTarget.position, transform.position);
-        handRb.velocity = (followTarget.position - transform.position).normalized * (followSpeed * distance);
+        // Update Position with Offset
+        var positionWithOffset = followTarget.position + positionOffset;
 
-        // Update Rotation
+        // Get the distance between target and player's hand
+        var distance = Vector3.Distance(positionWithOffset, transform.position);
+        handRb.velocity = (positionWithOffset - transform.position).normalized * (followSpeed * distance);
+
+        // Update Rotation with Offset
+        var rotationWithOffset = followTarget.rotation * Quaternion.Euler(rotationOffset);
+
         // Get the difference between the rotation of target and the rotation of player's hand
-        var q = followTarget.rotation * Quaternion.Inverse(handRb.rotation);
+        var q = rotationWithOffset * Quaternion.Inverse(handRb.rotation);
         // Concert the rotation difference to angle
         q.ToAngleAxis(out float angle, out Vector3 axis);
         handRb.angularVelocity = axis * angle * Mathf.Deg2Rad * rotationSpeed;
