@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController instance;
+
     private bool menuPressed;
 
     public GameObject menu;
 
+    public GameObject petal1;
+    public GameObject petal2;
+    public GameObject petal3;
+    public GameObject petal4;
+    public GameObject petal5;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -39,5 +50,40 @@ public class UIController : MonoBehaviour
     {
         Debug.Log("Menu button is pressed.");
         menu.SetActive(false);
+    }
+
+    public void ProgressDisplay()
+    {
+    
+        switch (GameManager.instance.petalCounter)
+        {
+            case 5:                
+
+                break;
+
+            case 4:            
+
+                break;
+
+            case 3:
+
+                break;
+
+            case 2:
+
+                break;
+
+            case 1:
+
+                break;
+
+            case 0:
+
+                break;
+
+            default:
+
+                break;
+        }
     }
 }

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UIController.instance.ProgressDisplay();
     }
 
     public void UpdateProgress()
@@ -31,6 +31,6 @@ public class GameManager : MonoBehaviour
         petalCounter++;
         Debug.Log("Collected " + petalCounter + " petal.");
         // Display to UI
-
+        UIController.instance.ProgressDisplay();
     }
 }
