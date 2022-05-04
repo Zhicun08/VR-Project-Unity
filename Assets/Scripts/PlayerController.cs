@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider playerCollider;
     private XROrigin xrOrigin;
 
-    private bool IsGrounded => Physics.Raycast(
-        new Vector2(transform.position.x, transform.position.y + 2.0f),
-        Vector3.down, 2.0f);
+    public Transform feetTrans; //Position of where the players feet touch the ground
+    float groundCheckDist = .5f; //How far down to check for the ground. The radius of Physics.CheckSphere
+    public bool grounded = false; //Is the player on the ground
+    //The physics layers you want the player to be able to jump off of. Just dont include the layer the palyer is on.
+    public LayerMask groundLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +36,15 @@ public class PlayerController : MonoBehaviour
         var center = xrOrigin.CameraInOriginSpacePos;
         playerCollider.center = new Vector3(center.x, playerCollider.center.y, center.z);
         playerCollider.height = xrOrigin.CameraInOriginSpaceHeight;
+
+        //The sphere check draws a sphere like a ray cast and returns true if any collider is withing its radius.
+        //grounded is set to true if a sphere at feetTrans.position with a radius of groundCheckDist detects any objects on groundLayer within it
+        grounded = Physics.CheckSphere(feetTrans.position, groundCheckDist, groundLayer);
     }
 
     private void OnJump(InputAction.CallbackContext obj)
     {
-        if (!IsGrounded) return;
+        if (!grounded) return;
         playerRb.AddForce(Vector3.up * jumpForce);
     }
 

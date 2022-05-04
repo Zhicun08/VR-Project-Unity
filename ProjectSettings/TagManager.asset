@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Right Hand
+  - Key
   layers:
   - Default
   - TransparentFX

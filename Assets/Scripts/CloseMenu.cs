@@ -22,6 +22,7 @@ public class CloseMenu : MonoBehaviour
     {
         if (other.CompareTag("Right Hand"))
         {
+            Debug.Log("Close Menu.");
             menu.SetActive(false);
         }
     }
