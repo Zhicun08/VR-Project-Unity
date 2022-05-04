@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 249642190}
   - component: {fileID: 249642189}
   - component: {fileID: 249642188}
-  - component: {fileID: 249642187}
   m_Layer: 0
   m_Name: Terrain_(1097.2, -14.0, -892.0)
   m_TagString: Untagged
@@ -233,20 +232,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &249642187
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249642186}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!154 &249642188
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -316,7 +301,6 @@ GameObject:
   - component: {fileID: 732788745}
   - component: {fileID: 732788744}
   - component: {fileID: 732788743}
-  - component: {fileID: 732788742}
   m_Layer: 0
   m_Name: Terrain_(-902.8, -14.0, -1598.0)
   m_TagString: Untagged
@@ -324,20 +308,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &732788742
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732788741}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!154 &732788743
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -407,7 +377,6 @@ GameObject:
   - component: {fileID: 1100379584}
   - component: {fileID: 1100379583}
   - component: {fileID: 1100379582}
-  - component: {fileID: 1100379581}
   m_Layer: 0
   m_Name: Terrain_(-902.8, -14.0, -598.0)
   m_TagString: Untagged
@@ -415,20 +384,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1100379581
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100379580}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!154 &1100379582
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -589,7 +544,6 @@ GameObject:
   - component: {fileID: 1172568694}
   - component: {fileID: 1172568693}
   - component: {fileID: 1172568692}
-  - component: {fileID: 1172568691}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -597,20 +551,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1172568691
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172568690}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!154 &1172568692
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -854,7 +794,6 @@ GameObject:
   - component: {fileID: 1452543536}
   - component: {fileID: 1452543535}
   - component: {fileID: 1452543534}
-  - component: {fileID: 1452543533}
   m_Layer: 0
   m_Name: Terrain_(1097.2, -14.0, -1892.0)
   m_TagString: Untagged
@@ -862,20 +801,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1452543533
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452543532}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!154 &1452543534
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -1038,7 +963,6 @@ GameObject:
   - component: {fileID: 1858908050}
   - component: {fileID: 1858908049}
   - component: {fileID: 1858908048}
-  - component: {fileID: 1858908047}
   m_Layer: 0
   m_Name: Terrain_(97.2, -14.0, -1598.0)
   m_TagString: Untagged
@@ -1046,20 +970,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1858908047
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858908046}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!154 &1858908048
 TerrainCollider:
   m_ObjectHideFlags: 0
