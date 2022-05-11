@@ -7,6 +7,10 @@ TagManager:
   - Collectible
   - Right Hand
   - Key
+  - Elevator 1
+  - Elevator 2
+  - Elevator 3
+  - Elevator 4
   layers:
   - Default
   - TransparentFX
