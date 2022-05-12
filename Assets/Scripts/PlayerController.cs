@@ -34,8 +34,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         var center = xrOrigin.CameraInOriginSpacePos;
-        playerCollider.center = new Vector3(center.x, playerCollider.center.y, center.z);
-        playerCollider.height = xrOrigin.CameraInOriginSpaceHeight;
+        playerCollider.height = Mathf.Clamp(xrOrigin.CameraInOriginSpaceHeight, 1.0f, 3.0f);
+        playerCollider.center = new Vector3(center.x, playerCollider.height / 2, center.z);
+        //playerCollider.center = new Vector3(center.x, playerCollider.center.y, center.z);
+        //playerCollider.height = xrOrigin.CameraInOriginSpaceHeight;
 
         //The sphere check draws a sphere like a ray cast and returns true if any collider is withing its radius.
         //grounded is set to true if a sphere at feetTrans.position with a radius of groundCheckDist detects any objects on groundLayer within it

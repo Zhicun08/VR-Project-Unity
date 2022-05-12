@@ -16,50 +16,26 @@ public class MovingPlatform : MonoBehaviour
 
     public GameObject collectVFX;
 
-    public bool isWaiting;
-    public float waitTimer;
-    public float maxWaitTime;
-
     // Start is called before the first frame update
     void Start()
     {
         canMove = false;
-        waitTimer = 0;
-        maxWaitTime = 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isWaiting)
-        {
-            waitTimer -= Time.deltaTime;
-            if (waitTimer <= 0)
-            { 
-                isWaiting = false; 
-            }
-        }
-
-        if (!isWaiting)
-        {
-            MovePlatform();
-        }
-    }
-
-    private void MovePlatform()
-    {
-        // If player pressed button
         if (canMove == true && DetectPlayer.instance.playerDetect == true)
         {
+            Debug.Log("Moving");
+
             // Move platform to the current point
             platform.position = Vector3.MoveTowards(platform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
 
             // If platform is close to one point
             if (Vector3.Distance(platform.position, points[currentPoint].position) < 0.5f)
             {
-                isWaiting = true;
-                waitTimer = maxWaitTime;
-
+                StartCoroutine(DelayCountdown());
                 // Increase the current point
                 currentPoint++;
 
@@ -70,6 +46,11 @@ public class MovingPlatform : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void MovePlatform()
+    {
+               
     }
 
     public void ElevatorMove()
@@ -87,13 +68,19 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.CompareTag(gameObject.tag))
         {
-            // Instantiate collected vfx
-            Instantiate(collectVFX, other.gameObject.transform.position, Quaternion.identity);
-
+            ElevatorMove();
             // Disable elevator sign
             elevatorSign.SetActive(false);
             Destroy(other.gameObject);
-            ElevatorMove();
+            // Instantiate collected vfx
+            Instantiate(collectVFX, other.gameObject.transform.position, Quaternion.identity);
         }
+    }
+
+    IEnumerator DelayCountdown()
+    {
+        canMove = false;
+        yield return new WaitForSeconds(5f);
+        canMove = true;
     }
 }
