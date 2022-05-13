@@ -141,7 +141,9 @@ public class Hand : MonoBehaviour
         // Save the original layer
         originalLayer = heldObject.gameObject.layer; 
         // Ignore player layer - keeps held objects from hitting the players collider
-        heldObject.gameObject.layer = ignorePlayerLayer; 
+        heldObject.gameObject.layer = ignorePlayerLayer;
+        // Reduce scale of object when grabbed
+        heldObject.transform.localScale /= 4;
 
         // Move hand to grab point
         followTarget = grabPoint;

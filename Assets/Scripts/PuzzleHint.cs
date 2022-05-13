@@ -20,7 +20,14 @@ public class PuzzleHint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
+            if (Hand.instance.isGrabbing)
+            {
+                gameObject.SetActive(true);
+            }
+            if (!Hand.instance.isGrabbing)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -32,7 +39,7 @@ public class PuzzleHint : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
-            else
+            if (!Hand.instance.isGrabbing)
             {
                 gameObject.SetActive(true);
             }

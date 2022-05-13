@@ -199,6 +199,7 @@ MonoBehaviour:
   grabbableLayer:
     serializedVersion: 2
     m_Bits: 64
+  isGrabbing: 0
 --- !u!114 &2963115068431938718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aae93eb60c5f5c4d89ae0dc24bc2ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectVFX: {fileID: 3781946150010653001, guid: 0a4bc2e019620cf4cbf17c2d374a6fb8, type: 3}
 --- !u!1 &5267079578158285491
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +353,7 @@ MonoBehaviour:
   grabbableLayer:
     serializedVersion: 2
     m_Bits: 64
+  isGrabbing: 0
 --- !u!114 &5267079578158285501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aae93eb60c5f5c4d89ae0dc24bc2ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectVFX: {fileID: 3781946150010653001, guid: 0a4bc2e019620cf4cbf17c2d374a6fb8, type: 3}
 --- !u!1 &5423865518345355008
 GameObject:
   m_ObjectHideFlags: 0
