@@ -46,7 +46,7 @@ public class UIController : MonoBehaviour
             if (leftHandDevices[0].TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out menuPressed) && menuPressed)
             {
                 // Open menu
-                Debug.Log("Menu button is pressed.");
+                //Debug.Log("Menu button is pressed.");
                 menu.SetActive(true);
             }
         }
@@ -54,7 +54,7 @@ public class UIController : MonoBehaviour
 
     public void CloseMenu()
     {
-        Debug.Log("Menu button is pressed.");
+        //Debug.Log("Menu button is pressed.");
         menu.SetActive(false);
     }
 
