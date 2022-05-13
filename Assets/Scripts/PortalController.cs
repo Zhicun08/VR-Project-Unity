@@ -16,14 +16,26 @@ public class PortalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            if (SceneManager.GetActiveScene().name == "Scene 1" && GameManager.instance.petalCounter == 5)
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+
+            if (SceneManager.GetActiveScene().name == "Scene 2")
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+
+            if (SceneManager.GetActiveScene().name == "Scene 3")
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
         }
     }
 }

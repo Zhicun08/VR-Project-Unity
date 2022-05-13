@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public int petalCounter;
 
+    public GameObject waterfall;
+    public GameObject portal;
+
 
     private void Awake()
     {
@@ -24,6 +27,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         UIController.instance.ProgressDisplay();
+        if (petalCounter == 5)
+        {
+            waterfall.SetActive(false);
+            portal.SetActive(true);
+        }
     }
 
     public void UpdateProgress()
