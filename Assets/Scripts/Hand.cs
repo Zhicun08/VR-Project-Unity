@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Hand : MonoBehaviour
 {
+    public static Hand instance;
+
     // Physics Movement
     [SerializeField] private ActionBasedController controller;
     [SerializeField] private float followSpeed = 30f;
@@ -20,13 +22,18 @@ public class Hand : MonoBehaviour
     private int ignorePlayerLayer; //This layer does not collide with the player
     private int originalLayer; //Here we can save the original layer the object was on that was picked up
 
-    private bool isGrabbing;
+    public bool isGrabbing;
     private GameObject heldObject;
     private Transform grabPoint;
     private FixedJoint joint1, joint2;
 
     private Transform followTarget;
     private Rigidbody handRb;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

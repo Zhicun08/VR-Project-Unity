@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
-
+    public GameObject collectVFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class Collect : MonoBehaviour
         if (other.CompareTag("Collectible"))
         {
             GameManager.instance.UpdateProgress();
+            Instantiate(collectVFX, other.gameObject.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
     }
