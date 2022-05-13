@@ -27,7 +27,9 @@ public class MovingPlatform : MonoBehaviour
     {
         if (canMove == true && DetectPlayer.instance.playerDetect == true)
         {
-            Debug.Log("Moving");
+            //Debug.Log("Moving");
+            // Disable elevator sign
+            elevatorSign.SetActive(false);
 
             // Move platform to the current point
             platform.position = Vector3.MoveTowards(platform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
@@ -46,12 +48,14 @@ public class MovingPlatform : MonoBehaviour
                 }
             }
         }
+
+        if (!DetectPlayer.instance.playerDetect)
+        {
+            // Enable elevator sign
+            elevatorSign.SetActive(true);
+        }
     }
 
-    private void MovePlatform()
-    {
-               
-    }
 
     public void ElevatorMove()
     {
@@ -62,6 +66,13 @@ public class MovingPlatform : MonoBehaviour
         }
 
         Debug.Log(canMove);
+    }
+
+    IEnumerator DelayCountdown()
+    {
+        canMove = false;
+        yield return new WaitForSeconds(5f);
+        canMove = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,12 +86,5 @@ public class MovingPlatform : MonoBehaviour
             // Instantiate collected vfx
             Instantiate(collectVFX, other.gameObject.transform.position, Quaternion.identity);
         }
-    }
-
-    IEnumerator DelayCountdown()
-    {
-        canMove = false;
-        yield return new WaitForSeconds(5f);
-        canMove = true;
     }
 }
