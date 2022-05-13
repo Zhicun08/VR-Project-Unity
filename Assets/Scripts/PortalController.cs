@@ -22,7 +22,7 @@ public class PortalController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (SceneManager.GetActiveScene().name == "Scene 1" && GameManager.instance.petalCounter == 5)
+            if (SceneManager.GetActiveScene().name == "Scene 1" && GameManager.instance.petalCounter >= 5)
             {
                 SceneManager.LoadScene(sceneToLoad);
             }

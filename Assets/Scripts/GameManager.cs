@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         UIController.instance.ProgressDisplay();
-        if (petalCounter == 5)
+        if (petalCounter >= 5)
         {
             waterfall.SetActive(false);
             portal.SetActive(true);

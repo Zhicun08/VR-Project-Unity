@@ -30,6 +30,9 @@ public class Hand : MonoBehaviour
     private Transform followTarget;
     private Rigidbody handRb;
 
+    AudioSource _audioSource;
+    public AudioClip sound;
+
     private void Awake()
     {
         instance = this;
@@ -57,6 +60,8 @@ public class Hand : MonoBehaviour
         // Teleport hands
         handRb.position = followTarget.position;
         handRb.rotation = followTarget.rotation;
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -131,7 +136,7 @@ public class Hand : MonoBehaviour
     private IEnumerator GrabObject(Collider collider, Rigidbody targetRb)
     {
         isGrabbing = true;
-
+        _audioSource.PlayOneShot(sound);
         // Create a grab point
         grabPoint = new GameObject().transform;
         // Find the closest point on the collider to the palm position
@@ -212,6 +217,9 @@ public class Hand : MonoBehaviour
             targetRb.collisionDetectionMode = CollisionDetectionMode.Discrete;
             targetRb.interpolation = RigidbodyInterpolation.None;
             heldObject.gameObject.layer = originalLayer; //Reset the physics layer
+            // Reduce scale of object when grabbed
+            heldObject.transform.localScale *= 4;
+
             heldObject = null;
         }
 
